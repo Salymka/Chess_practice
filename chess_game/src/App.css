@@ -27,6 +27,15 @@
   align-items: center;
 }
 
+.cell img {
+
+  position: relative;
+  padding-bottom: 76px;
+  width: 200px;
+}
+.pawnBlack{
+  margin-bottom: 12px;
+}
 .black {
   background: aqua;
 }
