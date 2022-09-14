@@ -21,4 +21,31 @@ export class Cell {
         this.idKey = Math.random();
 
     }
+
+    moveFigure(target: Cell) {
+        if(this.figure && this.figure?.canMove(target)) {
+            this.figure.moveFigure(target);
+            target.figure = this.figure;
+            target.figure.cell = target;
+            this.figure = null;
+        }
+    }
+    isEmpty() {
+        return this.figure === null;
+    }
+
+    isEmptyVertical(target: Cell) {
+        if (this.x !== target.x) {
+            return false;
+        }
+
+        const min = Math.min(this.y, target.y);
+        const max = Math.max(this.y, target.y);
+        for (let y = min + 1; y < max; y++ ) {
+            if (!this.board.getCell(this.x, y).isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

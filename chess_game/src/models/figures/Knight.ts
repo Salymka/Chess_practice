@@ -14,4 +14,10 @@ export class Knight extends Figure {
         this.name = FigureNames.Knight
 
     }
+    canMove(target: Cell): boolean {
+        if (!super.canMove(target)) {
+            return false;
+        }
+        return true;
+    }
 }

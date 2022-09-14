@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .app {
@@ -26,20 +27,40 @@
   justify-content: center;
   align-items: center;
 }
-
+.pawns{
+  margin-bottom: 10px;
+}
 .cell img {
 
   position: relative;
-  padding-bottom: 76px;
   width: 200px;
+  padding-bottom: 76px;
+  pointer-events: none;
+
+
 }
-.pawnBlack{
-  margin-bottom: 12px;
-}
+
 .black {
   background: aqua;
 }
 
 .white {
   background: cadetblue;
+}
+
+.selected {
+  background: darkslategray;
+  border: 5px dashed black ;
+}
+
+.available {
+  width: 12px;
+  height: 12px;
+  background: black;
+
+}
+
+.target {
+  background: #9e0d51;
+  border: 5px dashed black ;
 }
