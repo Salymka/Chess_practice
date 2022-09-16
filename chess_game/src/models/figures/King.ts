@@ -13,10 +13,15 @@ export class King extends Figure {
         this.name = FigureNames.King
 
     }
+
+
+
     canMove(target: Cell): boolean {
         if (!super.canMove(target)) {
             return false;
         }
-        return true;
+        return (Math.abs(target.x - this.cell.x) <= 1 && Math.abs(target.y - this.cell.y) <= 1)
+
+
     }
 }
