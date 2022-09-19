@@ -30,14 +30,22 @@ export class Cell {
             this.figure = null;
         }
     }
-    isEmpty() {
+    isEmpty(): boolean {
         return this.figure === null;
+    }
+
+    isEnemy(target: Cell): boolean {
+        if (target.figure) {
+            return this.figure?.color !== target.figure.color;
+        }
+        return false;
     }
 
     isEmptyVertical(target: Cell) {
         if (this.x !== target.x) {
             return false;
         }
+
 
         const min = Math.min(this.y, target.y);
         const max = Math.max(this.y, target.y);
