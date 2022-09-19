@@ -5,11 +5,11 @@
 }
 
 .app {
+  margin-top: 50px;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
 }
 
 .board {
@@ -17,6 +17,8 @@
   height: calc(64px * 8);
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+
 
 }
 
@@ -58,9 +60,53 @@
   height: 12px;
   background: black;
 
+
 }
 
 .target {
   background: #9e0d51;
   border: 5px dashed black ;
 }
+
+.yBar {
+  margin: auto;
+  height: 30px;
+  width: calc(64px * 8 + 60px);
+  background: darkcyan;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.yBarItem {
+  font-weight: bolder;
+  font-size: 18px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yBarPlus {
+  width: 30px;
+  height: 30px;
+  background: darkcyan;
+}
+.xBar {
+
+  height: calc(64px * 8);
+  width: 30px;
+  background: darkcyan;
+  justify-content: center;
+
+}
+.xBarItem {
+  font-weight: bolder;
+  font-size: 18px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

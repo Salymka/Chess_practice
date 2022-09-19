@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Board} from "../models/Board";
 import CellComponent from "./CellComponent";
 import {Cell} from "../models/Cell";
+import XBar from "./XBar";
 
 interface BoardProps {
     board: Board;
@@ -37,6 +38,7 @@ const BoardComponent: React.FC<BoardProps> = ({board, setBoard}) => {
 
     return (
         <div className={"board"}>
+
             {board.cells.map((row, index) =>
             <React.Fragment key={index}>
                 {row.map(cell =>
@@ -50,6 +52,7 @@ const BoardComponent: React.FC<BoardProps> = ({board, setBoard}) => {
                 )}
             </React.Fragment>
             )}
+
         </div>
     )
 };
