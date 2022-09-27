@@ -17,12 +17,14 @@ const BoardComponent: React.FC<BoardProps> = ({board, setBoard}) => {
     },[selectedCell])
 
     function click(cell: Cell) {
+
         if (selectedCell && selectedCell !== cell && selectedCell.figure?.canMove(cell)) {
             selectedCell.moveFigure(cell);
             setSelectedCell(null);
         }else {
             setSelectedCell(cell);
         }
+
 
     }
 

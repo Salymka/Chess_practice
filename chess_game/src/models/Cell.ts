@@ -1,5 +1,5 @@
 import {Colors} from "./Colors";
-import {Figure} from "./figures/Figure";
+import {Figure, FigureNames} from "./figures/Figure";
 import {Board} from "./Board";
 
 export class Cell {
@@ -24,6 +24,9 @@ export class Cell {
 
     moveFigure(target: Cell) {
         if(this.figure && this.figure?.canMove(target)) {
+            // if (this.figure.name === FigureNames.Checker){
+            //     target.board.getCell((target.x - this.x) / 2, (target.y - this.y) / 2).figure = null;
+            // }
             this.figure.moveFigure(target);
             target.figure = this.figure;
             target.figure.cell = target;

@@ -7,6 +7,7 @@ import {King} from "./figures/King";
 import {Queen} from "./figures/Queen";
 import {Knight} from "./figures/Knight";
 import {Bishop} from "./figures/Bishop";
+import {Checker} from "./figures/Checker";
 
 export class Board {
     cells: Cell[][] = [];
@@ -73,6 +74,7 @@ export class Board {
             new Pawn(Colors.WHITE, this.getCell(i, 6))
         }
     }
+
     private addRooks() {
         new Rook(Colors.BLACK, this.getCell(0, 0))
         new Rook(Colors.WHITE, this.getCell(0, 7))
@@ -80,8 +82,25 @@ export class Board {
         new Rook(Colors.WHITE, this.getCell(7, 7))
 
     }
+    private addCheckers() {
+        for (let i = 0; i < CELLS_IN_ROW - 1; i += 2) {
+            new Checker(Colors.BLACK, this.getCell(i, 0))
+            new Checker(Colors.BLACK, this.getCell(i + 1 , 1))
+            new Checker(Colors.BLACK, this.getCell(i, 2))
+            new Checker(Colors.WHITE, this.getCell(i + 1, 5))
+            new Checker(Colors.WHITE, this.getCell(i, 6))
+            new Checker(Colors.WHITE, this.getCell(i + 1, 7))
+        }
 
-    public addFigures() {
+
+
+    }
+    public addFiguresCheckers() {
+        this.addCheckers();
+
+    }
+
+    public addFiguresChess() {
         this.addBishops();
         this.addKings();
         this.addPawns();

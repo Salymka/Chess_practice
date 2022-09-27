@@ -20,7 +20,8 @@ const CellComponent: FC<CellProps> = ({cell, selected, click}) => {
             {cell.figure?.logo &&
                 <img src={cell.figure.logo}
                      alt={cell.figure.name}
-                     className={(cell.figure.name === FigureNames.Pawn) ? "pawns" : ""}
+                     className={(cell.figure.name === FigureNames.Pawn) ? "pawns" : ""
+                     + ((cell.figure.name === FigureNames.Checker) ? " checker" : "")}
                 />}
         </div>
     );

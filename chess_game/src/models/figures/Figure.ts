@@ -9,6 +9,7 @@ export enum FigureNames {
     Pawn = "Pawn",
     Knight = "Knight",
     Rook = "Rook",
+    Checker = "Checker",
 }
 
 export class Figure {

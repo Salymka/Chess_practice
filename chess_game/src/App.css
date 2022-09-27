@@ -35,7 +35,7 @@
 .cell img {
 
   position: relative;
-  width: 200px;
+
   padding-bottom: 76px;
   pointer-events: none;
 
@@ -110,3 +110,8 @@
   align-items: center;
 }
 
+.checker {
+  margin-top: 70px;
+  width: 65px;
+
+}
